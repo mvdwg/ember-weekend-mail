@@ -1,7 +1,5 @@
 import Ember from 'ember';
 
-const { set } = Ember;
-
 export default Ember.Route.extend({
   mailLookup: Ember.inject.service(),
   tagging: Ember.inject.service(),

@@ -15,5 +15,7 @@ export default create({
       star: clickable('td', { at: 1}),
       starred: hasClass('inbox-started', 'i', { scope: 'td:eq(1)'})
     }
-  })
+  }),
+
+  trash: clickable('.mail-option .fa-trash')
 });

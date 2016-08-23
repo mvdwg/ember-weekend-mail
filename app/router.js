@@ -6,6 +6,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.mount('telling-stories-dashboard', { path: '/stories' });
   this.route('folder', { path: ':folderName' }, function() {
     this.route('mail', { path: ':mailId' });
   });
