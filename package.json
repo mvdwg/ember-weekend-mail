@@ -49,9 +49,7 @@
     "ember-rl-dropdown": "^0.7.1",
     "ember-route-action-helper": "0.3.3",
     "ember-truth-helpers": "1.2.0",
-    "loader.js": "^4.0.1",
-    "telling-stories": "0.0.0",
-    "telling-stories-dashboard": "github:mvdwg/telling-stories-dashboard"
+    "loader.js": "^4.0.1"
   },
   "dependencies": {}
 }
