@@ -14,7 +14,7 @@ export default Ember.Route.extend({
 
   actions:  {
     moveToTrash(mail) {
-      return get(this, 'mailLookup').addTag(mail, 'trashed').then(() => {
+      return get(this, 'tagging').addTag(mail, 'trashed').then(() => {
         this.transitionTo('application');
       });
     },

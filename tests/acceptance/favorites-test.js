@@ -21,8 +21,6 @@ test('User favorites email from inbox', function(assert) {
     .trash();
 
   andThen(function() {
-    assert.ok(folderPage.emails(1).starred, 'email was not favorited');
+    assert.equal(folderPage.emails().count, 0);
   });
-
-  return stop();
 });
