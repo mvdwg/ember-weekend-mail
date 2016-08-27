@@ -50,7 +50,7 @@
     "ember-route-action-helper": "0.3.3",
     "ember-truth-helpers": "1.2.0",
     "loader.js": "^4.0.1",
-    "telling-stories": "1.0.0-alpha.1",
+    "telling-stories": "1.0.0-alpha.2",
     "telling-stories-dashboard": "1.0.0-alpha.1"
   },
   "dependencies": {}
