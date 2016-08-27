@@ -11,7 +11,7 @@ export default create({
   emails: collection({
     itemScope: 'table tr',
     item: {
-      checked: clickable('td', { at: 0 }),
+      checked: clickable('[type=checkbox]'),
       star: clickable('td', { at: 1}),
       starred: hasClass('inbox-started', 'i', { scope: 'td:eq(1)'})
     }

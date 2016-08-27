@@ -24,3 +24,19 @@ test('User favorites email from inbox', function(assert) {
     assert.equal(folderPage.emails().count, 0);
   });
 });
+
+test('User deletes multiple emails at the same time', function(assert) {
+  server.createList('email', 10);
+
+  folderPage.visit();
+  folderPage.emails(0).checked();
+  folderPage.emails(1).checked();
+  folderPage
+    .clickOn('Move to')
+    .clickOn('Delete')
+    .clickOn('Trash');
+
+  andThen(function() {
+    assert.equal(folderPage.emails().count, 2);
+  });
+});
