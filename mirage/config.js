@@ -32,8 +32,6 @@ function getEmailMetaCounts(mail){
 export default function() {
   this.passthrough('/telling-stories.json');
 
-  this.namespace = 'api/v1';
-
   this.patch('/emails/:id', function({ emails }, request){
     const id = request.params.id;
     const attrs = this.normalizedRequestAttrs();
