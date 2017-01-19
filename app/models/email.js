@@ -13,9 +13,9 @@ export default DS.Model.extend({
   meta: attr(),
   tags: attr({ defaultValue: () => [] }),
   starred: Ember.computed('tags.[]', function() {
-    return get(this, 'tags').contains('starred');
+    return get(this, 'tags').includes('starred');
   }),
   trashed: Ember.computed('tags.[]', function() {
-    return get(this, 'tags').contains('trashed');
+    return get(this, 'tags').includes('trashed');
   }),
 });

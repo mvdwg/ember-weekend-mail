@@ -25,7 +25,7 @@ export default Ember.Service.extend({
 
   hasTag(mail, tag) {
     const tags = get(mail, 'tags');
-    return tags.contains(tag);
+    return tags.includes(tag);
   },
 
   updateTags(mail, callback) {
@@ -49,8 +49,8 @@ export default Ember.Service.extend({
   filterByTags(mail, { include = [], exclude = [] }) {
     return mail.filter((m) => {
       let passed = include.length === 0 ? true : false;
-      include.forEach((i) => passed = passed || get(m, 'tags').contains(i));
-      exclude.forEach((e) => passed = passed && !get(m, 'tags').contains(e));
+      include.forEach((i) => passed = passed || get(m, 'tags').includes(i));
+      exclude.forEach((e) => passed = passed && !get(m, 'tags').includes(e));
       return passed;
     });
   },
