@@ -5,8 +5,8 @@ const { get } = Ember;
 function filterByTags(mail, { include = [], exclude = [] }) {
   return mail.where((m) => {
     let passed = include.length === 0 ? true : false;
-    include.forEach((i) => passed = passed || get(m, 'tags').contains(i));
-    exclude.forEach((e) => passed = passed && !get(m, 'tags').contains(e));
+    include.forEach((i) => passed = passed || get(m, 'tags').includes(i));
+    exclude.forEach((e) => passed = passed && !get(m, 'tags').includes(e));
     return passed;
   });
 }
